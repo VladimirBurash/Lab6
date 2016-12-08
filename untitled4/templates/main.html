@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <title></title>
+</head>
+<body>
+<style type="text/css">
+    td {
+        text-align: center;
+        width: 200px;
+    }
+
+</style>
+    <table class="wrapper" height = 200dp>
+        <thead>
+            <tr>
+                <td>Группа</td>
+                <td>Участники</td>
+                <td>Email</td>
+                <td>Vk группа</td>
+            </tr>
+        </thead>
+        <tbody class="jumbotron">
+            {% for a in artist %}
+                <tr>
+                <td>{{ a.artist_name }}</td>
+                <td>{{ a.artist_people }}</td>
+                <td>{{ a.artist_contact }}</td>
+                <td>{{ a.artist_vk }}</td>
+                </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+
+</body>
+</html>
